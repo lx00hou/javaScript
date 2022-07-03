@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>let const 以及暂时性死区</title>
+</head>
+<body>
+<script>
+    let web = "gitHub.lx00hou";
+
+    function  LX() {
+        console.log('查找web 变量',web);
+        // let web = "gitHub";  这行代码放开注释 会报错, 除非写到 打印 的前面
+
+    }
+    LX()
+
+</script>
+</body>
+</html>

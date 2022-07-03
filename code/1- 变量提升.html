@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>变量提升</title>
+</head>
+<body>
+<script>
+    // 浏览器 在执行代码 之前 会先对代码 进行 预解析。分析中就包括 变量提升
+    console.log('obj',obj);   // 由于 var 存在 变量提升 所以 不会报错 而是输出 undefined
+    var obj = "这是一个对象";
+
+    function YC(){
+        if(false){
+            var web = 'https://github.com/lx00hou'
+        }
+        console.log(web)   // 输出undefined 。即使没有进入 判断条件, web 也会 在代码预解析阶段 变量提升
+    }
+    YC()
+
+</script>
+</body>
+</html>
