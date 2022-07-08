@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>const 声明常量</title>
+</head>
+<body>
+<script>
+/**
+ * const 声明的 变量是 常量 (同一个作用域下)不可更改
+ * */
+
+
+// 全局作用域
+const url = "GitHub.com";
+{
+    //块作用域
+    const url = "lx00hou";
+    console.log(url)
+}
+console.log(url)
+</script>
+</body>
+</html>

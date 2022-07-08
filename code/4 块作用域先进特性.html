@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>块作用域先进特性</title>
+</head>
+<body>
+<script>
+    /**
+     * 由于for 循环没有块作用域 导致 全局变量i 被改变
+     * 将 循环中的 var 声明  改为 let 即可解决这个问题
+     * */
+    var i = 99;
+    for (var i = 0 ; i < 5 ; i ++){
+        console.log('i-->',i)
+    }
+    console.log('i',i)
+</script>
+</body>
+</html>

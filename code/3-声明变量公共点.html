@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>var let const 共同点</title>
+</head>
+<body>
+<script>
+    /**
+     * 函数当中可以访问到外部的全局变量
+     * */
+    var web = "gitHub.com/lx00hou";
+    let webLet = "gitHub.com";
+    const webConst = "gitHub";
+    function visit() {
+        console.log(web)
+        console.log(webLet)
+        console.log(webConst)
+    }
+    visit()
+</script>
+</body>
+</html>

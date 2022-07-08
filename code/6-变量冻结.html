@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Object.freeze 变量冻结</title>
+</head>
+<body>
+<script>
+    const host = {
+        site:"gitHub.com"
+    }
+    host.site = 'gitHub.com/lx00huo'
+    const freeze = {
+        site:"lx00hou"
+    }
+    Object.freeze(freeze);   // freeze 被锁定(冻结) 内部也无法再发生任何改变
+    freeze.site = "无法更改"
+    console.log(host.site)
+    console.log(freeze)
+</script>
+</body>
+</html>
