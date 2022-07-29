@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>传值 与 传址</title>
+</head>
+<body>
+<script>
+//    基本量 传值    对象 传地址
+
+
+    // a b 是两个地址
+    let a = 10;
+    let b = a;
+    b = 20; 
+    console.log(a,b);
+
+    // 变量 c 和 d 公用一个内存地址  一个改变 另一个也会跟着改变
+    let c = {name:"text",adderss:"sdzb"};
+    let d = c;
+    d.name = 'text+++++'
+    console.log(c,d);
+
+</script>
+</body>
+</html>
