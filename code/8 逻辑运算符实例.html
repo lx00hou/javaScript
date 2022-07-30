@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>逻辑运算符 实例</title>
+</head>
+<body>
+    <input type="text" name='passWord' />
+    <input type="text" name='pWAgain' />
+    <br />
+    <div name="msg"></div>
+<script>
+    function query(name){
+        return document.querySelector(`[name = ${name}]`)
+    }
+
+    let inputs = document.querySelectorAll("[name = passWord],[name = pWAgain]");
+    [...inputs].map(item => {
+        item.addEventListener('keyup',function(){
+            let msg = '';
+            if(query('passWord').value !== query('pWAgain').value || query('passWord').value.length < 5){
+                msg = '两次密码不一致 或 密码长度5位'
+            }
+            query('msg').innerHTML = msg
+        })
+    })
+</script>
+</body>
+</html>
