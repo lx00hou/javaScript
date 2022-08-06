@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>break 以及  continue 终止循环</title>
+</head>
+<body>
+    <!-- 
+        continue: 停止当前循环
+        break : 跳出循环
+        循环嵌套情况下 找到符合条件 跳出外层循环 方法: 命名循环 配合 break (此方法 只使用月 for 关键字循环体,不适应与 forEach)
+     -->
+    <script>
+        for(let i=1;i<11;i++){
+            if(i%2 === 0) continue
+            console.log('10以内的奇数',i);
+        }
+
+
+
+        for(let j=1;j<10;j++){
+            if(j === 5) break
+            console.log('break',j); 
+        }
+
+        
+
+        loop1: for(let i = 1; i < 5 ; i ++){
+            loop2: for(let j = 1 ; j < 5 ; j++){
+                if(i > 2 && j > 3 ) break loop1
+                console.log('内层循环',j);
+            }
+            console.log('外层循环',i);
+        }
+
+    </script>
+</body>
+</html>
